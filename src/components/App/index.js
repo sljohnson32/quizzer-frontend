@@ -9,8 +9,22 @@ export default class App extends Component {
   constructor() {
     super()
     this.state = {
-      quizzes: []
+      quizzes: [],
+      totalScore: 0,
+      allScores:
     }
+  }
+
+  submitScore(score) {
+    axi
+  }
+
+  updateScore(id, newScore) {
+    let score = Object.assign({}, this.state.totalScore);
+    score[id] = newScore;
+    this.setState({ totalScore: score}, () => {
+      submitScore(score);
+    });
   }
 
   componentDidMount() {
@@ -32,7 +46,7 @@ export default class App extends Component {
           <img src={sam} className="App-logo" alt="logo" />
           <h2>Sam Johnson's Mod3 Assessment</h2>
         </div>
-        <Quiz data={this.state.quizzes} />
+        <Quiz data={this.state.quizzes} updateScore={this.updateScore.bind(this)} />
       </div>
     );
   }

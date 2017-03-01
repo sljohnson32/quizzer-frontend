@@ -5,13 +5,13 @@ import './Questions.css';
 export default class Questions extends Component {
 
   handleQuestionRender() {
-    return this.props.questions.map((question, i) => {
+    return this.props.questions.map(question => {
       return (
-        <div key={i}>
-          <label>
-            <h4>{question.title}</h4>
-          </label>
-            <Answers data={question.answers} />
+        <div key={question.id}>
+          <h4>{question.title}</h4>
+          <form>
+            <Answers data={question.answers} questionId={question.id} />
+          </form>
         </div>
       )
     })
