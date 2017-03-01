@@ -25,11 +25,11 @@ export default class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-        <img src={sam} className="App-logo" alt="logo" />
-        <img src={sam} className="App-logo" alt="logo" />
-        <img src={sam} className="App-logo" alt="logo" />
-        <img src={sam} className="App-logo" alt="logo" />
-        <img src={sam} className="App-logo" alt="logo" />
+          <img src={sam} className="App-logo" alt="logo" />
+          <img src={sam} className="App-logo" alt="logo" />
+          <img src={sam} className="App-logo" alt="logo" />
+          <img src={sam} className="App-logo" alt="logo" />
+          <img src={sam} className="App-logo" alt="logo" />
           <h2>Sam Johnson's Mod3 Assessment</h2>
         </div>
         <Quiz data={this.state.quizzes} />
