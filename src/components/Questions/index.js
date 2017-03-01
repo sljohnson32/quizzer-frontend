@@ -8,8 +8,10 @@ export default class Questions extends Component {
     return this.props.questions.map((question, i) => {
       return (
         <div key={i}>
-          <h4>{question.title}</h4>
-          <Answers data={question.answers} />
+          <label>
+            <h4>{question.title}</h4>
+          </label>
+            <Answers data={question.answers} />
         </div>
       )
     })
