@@ -19,10 +19,8 @@ export default class Quiz extends Component {
 
   render() {
     return (
-      <div className="quiz-container">
-        <form onSubmit={this.handleSubmit}>
-          {this.handleQuizRender()}
-        </form>
+      <div className="quiz-container">  
+        {this.handleQuizRender()}
       </div>
     );
   }
