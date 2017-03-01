@@ -20,7 +20,9 @@ export default class Quiz extends Component {
   render() {
     return (
       <div className="quiz-container">
-        {this.handleQuizRender()}
+        <form onSubmit={this.handleSubmit}>
+          {this.handleQuizRender()}
+        </form>
       </div>
     );
   }
