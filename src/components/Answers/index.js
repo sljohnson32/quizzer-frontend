@@ -6,13 +6,14 @@ export default class Answers extends Component {
   constructor() {
     super()
     this.state = {
-      answer: '',
-      score: 0
+      answer: ''
     }
   }
 
   setScore(e, score, id) {
-    this.setState({ answer: e.target.value, score: score})
+    this.setState({ answer: e.target.value }, () => {
+      this.props.callback(id, score)
+    })
   }
 
   render() {

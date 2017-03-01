@@ -11,6 +11,7 @@ export default class Quiz extends Component {
           <h2>{quiz.title}</h2>
           <Questions
             questions={quiz.questions}
+            callback={this.props.callback}
           />
         </div>
       )
@@ -19,7 +20,7 @@ export default class Quiz extends Component {
 
   render() {
     return (
-      <div className="quiz-container">  
+      <div className="quiz-container">
         {this.handleQuizRender()}
       </div>
     );

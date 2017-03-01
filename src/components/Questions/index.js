@@ -10,7 +10,11 @@ export default class Questions extends Component {
         <div key={question.id}>
           <h4>{question.title}</h4>
           <form>
-            <Answers data={question.answers} questionId={question.id} />
+            <Answers
+              data={question.answers}
+              questionId={question.id}
+              callback={this.props.callback} 
+            />
           </form>
         </div>
       )
